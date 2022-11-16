@@ -17,10 +17,13 @@ function getResult(e) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        for (let i = 0; i < 10; i++) {
-          results[i].textContent = data.results[i];
-        }
+        // console.log(data);
+        // for (let i = 0; i < 10; i++) {
+        //   results[i].textContent = data.results[i];
+        // }
+        localStorage.setItem("results", JSON.stringify(data));
       });
+    location.href = "./results.html";
   } else if (e.target.id == "random") {
     const url = `http://localhost:3000/results/${name}/random`;
     fetch(url)
