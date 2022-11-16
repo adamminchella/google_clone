@@ -11,6 +11,6 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to Google");
 });
 
-app.use("/result", resultRoutes);
+app.use("/results", resultRoutes);
 
 module.exports = app;
