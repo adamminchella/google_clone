@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
 body {
-  /* overflow: hidden; */
+  color: rgb(33, 33, 33);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -12,7 +14,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 nav {
@@ -21,13 +23,37 @@ nav {
 }
 
 ul {
+  padding: 0 10px;
   display: flex;
+  align-items: center;
   gap: 20px;
   font-size: 0.8rem;
 }
 
+.icon-container {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.icon-container:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+
+.icon {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 li {
   list-style: none;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .content {
@@ -38,27 +64,62 @@ li {
 }
 
 .logo {
-  width: 400px;
+  width: 350px;
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 50px;
+}
+
+.search-bar:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px rgb(187, 187, 187);
+}
+
+.search-icon,
+.clear-icon {
+  width: 15px;
+  height: 15px;
+  filter: opacity(0.5);
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.transparent {
+  display: none;
+  cursor: initial;
 }
 
 #input {
-  padding: 20px;
-  border-radius: 50px;
-  margin: 20px auto;
-  width: 80%;
-  border: 1px solid lightgray;
+  border: 0px solid transparent;
+  padding: 13px 0;
+  flex-grow: 1;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+#input:focus {
+  outline: none;
 }
 
 .buttons > * {
-  border: none;
-  padding: 10px;
+  border: 1px solid transparent;
+  padding: 10px 17px;
   border-radius: 5px;
+  background-color: rgb(247, 247, 247);
+  margin: 0 3px;
+}
+
+.buttons > *:hover {
+  cursor: pointer;
+  border: 1px solid rgb(223, 223, 223);
+  box-shadow: 0 1px 1px rgb(218, 218, 218);
 }
 
 form {
@@ -66,7 +127,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 700px;
 }
 
 footer {
