@@ -3,11 +3,6 @@ myForm.addEventListener("click", getResult);
 const input = document.getElementById("input");
 const clearInputBtn = document.querySelector(".clear-icon");
 
-let results = [];
-for (let i = 0; i < 10; i++) {
-  results[i] = document.getElementById(`result${i + 1}`);
-}
-
 function getResult(e) {
   e.preventDefault();
   console.log(e.target);
@@ -18,9 +13,6 @@ function getResult(e) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        for (let i = 0; i < 10; i++) {
-          results[i].textContent = data.results[i];
-        }
         localStorage.setItem("results", JSON.stringify(data));
       });
     location.href = "./results.html";
