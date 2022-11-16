@@ -3,7 +3,7 @@
 body {
   color: rgb(33, 33, 33);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 main {

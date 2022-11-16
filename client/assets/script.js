@@ -24,11 +24,11 @@ function getResult(e) {
   } else if (e.target.id == "random") {
     const url = `http://localhost:3000/results/${name}/random`;
     fetch(url)
-      .then((res) => res.text())
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         clearData();
-        results[0].textContent = data;
+        location.href = data.url;
       });
   }
 }
