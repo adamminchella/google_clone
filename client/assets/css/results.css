@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.result {
+  margin-top: 40px;
+}
+
+h2 {
+  display: inline;
+}
+
+a {
+  color: rgb(26, 13, 171);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
