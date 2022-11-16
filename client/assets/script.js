@@ -1,5 +1,6 @@
 const myForm = document.querySelector("form");
 myForm.addEventListener("click", getResult);
+
 let results = [];
 for (let i = 0; i < 10; i++) {
   results[i] = document.getElementById(`result${i + 1}`);
@@ -7,7 +8,7 @@ for (let i = 0; i < 10; i++) {
 
 function getResult(e) {
   e.preventDefault();
-  console.log(e.target.id);
+  console.log(e.target);
   const name = document.getElementById("input").value;
   if (e.target.id == "all") {
     const url = `http://localhost:3000/results/${name}`;
