@@ -5,6 +5,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 main {
@@ -127,3 +129,54 @@ form {
   align-items: center;
   width: 700px;
 }
+
+footer {
+  background-color: rgb(240, 240, 240);
+  color: gray;
+  width: 100%;
+}
+
+#top {
+  font-size: 15px;
+  padding: 1px;
+  border-bottom: 1px solid lightgray
+}
+
+#top p {
+  margin-left: 25px;
+
+}
+
+#bottom {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -15px;
+  padding: 1.7px;
+}
+
+ul {
+  display: flex;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+li {
+  list-style: none;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#middle {
+  margin-right: 150px;
+  margin-left: 0;
+}
+
+ul img{
+  margin-right: -50px;
+  margin-bottom: 0px;
+  width: 1.3em;
+  height: 1.3em;
+}
+
