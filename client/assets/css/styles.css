@@ -18,14 +18,39 @@ nav {
 }
 
 ul {
+  padding: 0 10px;
   display: flex;
+  align-items: center;
   gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(33, 33, 33);
   font-size: 0.8rem;
+}
+
+.icon-container {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.icon-container:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+
+.icon {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
   list-style: none;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .content {
@@ -36,21 +61,42 @@ li {
 }
 
 .logo {
-  width: 400px;
+  width: 350px;
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+}
+
+.search-icon,
+.clear-icon {
+  width: 15px;
+  height: 15px;
+  filter: opacity(0.5);
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.transparent {
+  opacity: 0;
+  cursor: initial;
 }
 
 #input {
-  padding: 20px;
-  border-radius: 50px;
-  margin: 20px auto;
-  width: 80%;
-  border: 1px solid lightgray;
+  border: none;
+  padding: 14px 0;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+#input:focus {
+  outline: none;
 }
 
 .buttons > * {
@@ -64,5 +110,5 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 700px;
 }

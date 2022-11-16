@@ -1,5 +1,7 @@
 const myForm = document.querySelector("form");
 myForm.addEventListener("click", getResult);
+const input = document.getElementById("input");
+const clearInputBtn = document.querySelector(".clear-icon");
 
 let results = [];
 for (let i = 0; i < 10; i++) {
@@ -36,3 +38,16 @@ function clearData() {
     results[i].textContent = "";
   }
 }
+
+input.addEventListener("input", () => {
+  clearInputBtn.classList.remove("transparent");
+  if (!input.value) {
+    clearInputBtn.classList.add("transparent");
+  }
+});
+
+clearInputBtn.addEventListener("click", () => {
+  console.log("test");
+  input.value = "";
+  clearInputBtn.classList.add("transparent");
+});
