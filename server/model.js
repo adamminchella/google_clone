@@ -3,7 +3,7 @@ const resultsData = require("./data");
 class Result {
   constructor(resultData) {
     this.name = resultData.name;
-    this.result = resultData.result;
+    this.result = resultData.results;
   }
   static get all() {
     const allResults = resultsData.map((result) => new Result(result));
@@ -18,8 +18,8 @@ class Result {
   }
 
   static findRandomResult(foundResult) {
-    const randomIndex = getRandomInt(0, foundResult.result.length - 1);
-    const randomResult = foundResult.result[randomIndex];
+    const randomIndex = getRandomInt(0, foundResult.results.length - 1);
+    const randomResult = foundResult.results[randomIndex];
     return randomResult;
   }
 }
