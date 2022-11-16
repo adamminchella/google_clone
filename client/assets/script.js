@@ -17,10 +17,10 @@ function getResult(e) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        // for (let i = 0; i < 10; i++) {
-        //   results[i].textContent = data.results[i];
-        // }
+        console.log(data);
+        for (let i = 0; i < 10; i++) {
+          results[i].textContent = data.results[i];
+        }
         localStorage.setItem("results", JSON.stringify(data));
       });
     location.href = "./results.html";
@@ -30,15 +30,8 @@ function getResult(e) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        clearData();
         location.href = data.url;
       });
-  }
-}
-
-function clearData() {
-  for (let i = 0; i < 10; i++) {
-    results[i].textContent = "";
   }
 }
 
