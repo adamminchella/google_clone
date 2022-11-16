@@ -84,15 +84,16 @@ li:hover {
 }
 
 .transparent {
-  opacity: 0;
+  display: none;
   cursor: initial;
 }
 
 #input {
-  border: none;
+  border: 0px solid transparent;
   padding: 14px 0;
   flex-grow: 1;
   font-size: 16px;
+  margin-right: 20px;
 }
 
 #input:focus {
