@@ -22,9 +22,11 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
+  padding: 0 12px;
 }
 
-ul {
+nav ul {
+  gap: 15px;
   margin: 15px 10px;
   padding: 0;
   display: flex;
@@ -50,11 +52,11 @@ ul {
   align-items: center;
 }
 
-li {
+.header-list {
   list-style: none;
 }
 
-li:hover {
+.header-list:hover {
   text-decoration: underline;
   cursor: pointer;
 }
