@@ -74,9 +74,11 @@ function displayDropdown(recentSearches) {
 
   const newList = document.createElement("ol");
   recentSearches.forEach((searchString) => {
+    const listItemContainer = document.createElement("div");
+    listItemContainer.classList.add("list-item-container");
     const newListItem = document.createElement("li");
     newListItem.textContent = searchString;
-    newListItem.addEventListener("click", () => {
+    listItemContainer.addEventListener("click", () => {
       input.value = searchString;
       const url = `http://localhost:3000/results/${searchString}`;
       fetch(url)
@@ -86,7 +88,14 @@ function displayDropdown(recentSearches) {
         });
       location.href = "./results.html";
     });
-    newList.appendChild(newListItem);
+    const recentIcon = document.createElement("img");
+    recentIcon.classList.add("recent-icon");
+    recentIcon.setAttribute("src", "./assets/images/recent-icon.png");
+
+    listItemContainer.appendChild(recentIcon);
+    listItemContainer.appendChild(newListItem);
+
+    newList.appendChild(listItemContainer);
   });
   newList.classList.add("dropdown-list");
 
