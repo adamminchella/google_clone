@@ -14,6 +14,9 @@ class Result {
     const requestResult = resultsData.find(
       (object) => object.name.toLowerCase() == searchName.toLowerCase()
     );
+    if (!requestResult) {
+      return;
+    }
     const found = new Result(requestResult);
     return found;
   }

@@ -12,6 +12,10 @@ for (let i = 0; i < 10; i++) {
 
 window.addEventListener("load", () => {
   console.log(parsedResults);
+  if (parsedResults.message) {
+    descriptionData[0].textContent = parsedResults.message;
+    return;
+  }
   for (let i = 0; i < 10; i++) {
     if (typeof parsedResults.result[i] == "undefined") {
       return;
