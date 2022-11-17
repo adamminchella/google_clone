@@ -49,18 +49,21 @@ const results = [
     results: [
       {
         title: "Clubs that Mildred has visited",
-        description: "Holy cow, Mildred, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
+        description:
+          "Holy cow, Mildred, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
         url: "https://directory.independent.co.uk/night-clubs/in/uk",
       },
       {
         title: "Clubs that Mildred has not visited",
-        description: "No surprises here,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
+        description:
+          "No surprises here,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
         url: "http://www.blankwebsite.com/",
       },
       {
         title: "A history of Mildred",
-        description: "The origin and popularity of the name Mildred, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
-        url: "https://www.omlet.co.uk/guide/cats/choosing_the_right_cat_for_you/cat_coat_colours_and_patterns/",
+        description:
+          "The origin and popularity of the name Mildred, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus omnis, facere quibusdam deserunt, suscipit animi sapiente cum rem facilis architecto vel sed consequatur nemo aperiam quia? Fugiat, architecto molestiae.",
+        url: "https://www.behindthename.com/name/mildred",
       },
     ],
   },
