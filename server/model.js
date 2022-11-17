@@ -14,12 +14,22 @@ class Result {
     const requestResult = resultsData.find(
       (object) => object.name.toLowerCase() == searchName.toLowerCase()
     );
-    return requestResult;
+    if (!requestResult) {
+      return;
+    }
+    const found = new Result(requestResult);
+    return found;
+  }
+
+  static findRandomData() {
+    const randomDataIndex = getRandomInt(0, resultsData.length - 1);
+    const randomData = resultsData[randomDataIndex];
+    return new Result(randomData);
   }
 
   static findRandomResult(foundResult) {
-    const randomIndex = getRandomInt(0, foundResult.results.length - 1);
-    const randomResult = foundResult.results[randomIndex];
+    const randomIndex = getRandomInt(0, foundResult.result.length - 1);
+    const randomResult = foundResult.result[randomIndex];
     return randomResult;
   }
 }
