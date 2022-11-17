@@ -1,5 +1,5 @@
 let results = localStorage.getItem("results");
-results = JSON.parse(results);
+let parsedResults = JSON.parse(results);
 
 let titleData = [];
 let descriptionData = [];
@@ -11,13 +11,13 @@ for (let i = 0; i < 10; i++) {
 }
 
 window.addEventListener("load", () => {
-  console.log(results);
+  console.log(parsedResults);
   for (let i = 0; i < 10; i++) {
-    if (typeof results.results[i] == "undefined") {
+    if (typeof parsedResults.result[i] == "undefined") {
       return;
     }
-    titleData[i].textContent = results.results[i].title;
-    descriptionData[i].textContent = results.results[i].description;
-    linkData[i].href = results.results[i].url;
+    titleData[i].textContent = parsedResults.result[i].title;
+    descriptionData[i].textContent = parsedResults.result[i].description;
+    linkData[i].href = parsedResults.result[i].url;
   }
 });

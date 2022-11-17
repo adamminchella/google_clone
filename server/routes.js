@@ -8,6 +8,10 @@ router.get("/", (req, res) => {
 
 router.get("/:name", (req, res) => {
   const getResult = req.params.name;
+  if (getResult == "random") {
+    const result = Result.findRandomData();
+    res.status(200).send(result);
+  }
   const foundResult = Result.findByName(getResult);
   try {
     if (!foundResult) {

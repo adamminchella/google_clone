@@ -17,13 +17,24 @@ function getResult(e) {
       });
     location.href = "./results.html";
   } else if (e.target.id == "random") {
-    const url = `http://localhost:3000/results/${name}/random`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        location.href = data.url;
-      });
+    if (!name) {
+      console.log("test");
+      const url = `http://localhost:3000/results/random`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          localStorage.setItem("results", JSON.stringify(data));
+          location.href = "./results.html";
+        });
+    } else {
+      const url = `http://localhost:3000/results/${name}/random`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          //   console.log(data);
+          location.href = data.url;
+        });
+    }
   }
 }
 
