@@ -1,3 +1,4 @@
+const results = require("./data");
 const resultsData = require("./data");
 
 class Result {
@@ -39,5 +40,14 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// var i = 0;
+// var total = resultsData.results.length;
+// var ids = [];
+// for(; i < total; i++) {
+//    ids.push( results[ i ].id );
+// }
+// console.log(ids);
+
 
 module.exports = Result;

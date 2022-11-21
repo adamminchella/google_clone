@@ -137,28 +137,24 @@ main {
   margin-top: 15px;
 }
 
-#link {
+main .http {
   display: flex;
 }
 
-#http {
-  color: black;
-  font-size: 15px;
-}
 
-#link img {
-  margin-top: 7px;
+main img {
+  margin-top: 15px;
   margin-left: 10px;
   height: 18px;
   width: 20px;
   opacity: 0.8;
 }
 
-a {
+main a {
   text-decoration: none;
 }
 
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
 
@@ -169,13 +165,17 @@ main h2 {
   color: #460DAB;
 }
 
+main h3 {
+  font-size: 15px;
+}
+
 main p {
   font-size: 15px;
   color: rgb(112,117,122);
   margin-top: 5px;
 }
 
-.result {
+main .result {
   margin-top: 5px;
   margin-bottom: 30px;
 }
@@ -224,3 +224,4 @@ footer li {
   margin-left: 10px;
   margin-right: 10px;
 }
+
